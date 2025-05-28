@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-black text-white font-sans;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.diamond {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.diamond:hover {
+  transform: rotate(45deg) scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.diamond-content {
+  transform: rotate(-45deg);
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded transition-all duration-300 font-medium;
+  }
+
+  .btn-primary {
+    @apply bg-white text-black hover:bg-gray-200;
+  }
+
+  .btn-outline {
+    @apply border border-white text-white hover:bg-white hover:text-black;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-custom {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}

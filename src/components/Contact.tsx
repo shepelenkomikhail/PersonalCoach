@@ -85,8 +85,8 @@ const Contact: React.FC = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Контактная информация</h3>
               <p className="text-gray-400 mb-2">Email: maxim@manko-fitness.com</p>
-              <p className="text-gray-400 mb-2">Телефон: +7 (999) 123-45-67</p>
-              <p className="text-gray-400">Москва, Россия</p>
+              <p className="text-gray-400 mb-2">Телефон: +48 (999) 123-45-67</p>
+              <p className="text-gray-400">Варшава, Польша</p>
             </div>
             
             <div>

@@ -14,31 +14,30 @@ const About: React.FC = () => {
         >
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">МАКСИМ МАНЬКО</h2>
-            <p className="text-gray-400 mb-8 leading-relaxed">
-              Сертифицированный персональный тренер с более чем 10-летним опытом работы. 
-              Специализируюсь на функциональных тренировках, силовом тренинге и коррекции 
-              фигуры. Индивидуальный подход к каждому клиенту — ключ к достижению ваших 
-              целей в фитнесе.
+            <p className="text-gray-300 mb-8 leading-relaxed">
+              Я — персональный тренер, который не ведёт клиентов вслепую.
+              Моя задача — не просто составить план, а помочь тебе построить сильное тело и железную дисциплину.
+              Каждый план я подстраиваю под тебя: цели, занятость, предпочтения, уровень подготовки.
             </p>
             
             <div className="mt-8">
-              <h3 className="text-2xl font-semibold mb-4">Специализация</h3>
-              <ul className="text-gray-400 space-y-2">
+              <h3 className="text-2xl font-semibold mb-4">Работаю с теми, кто хочет:</h3>
+              <ul className="text-gray-300 space-y-2">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-white inline-block mr-3"></span>
-                  Снижение веса и коррекция фигуры
+                   снизить вес без жёстких ограничений
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-white inline-block mr-3"></span>
-                  Набор мышечной массы
+                   набрать массу с сохранением подвижности
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-white inline-block mr-3"></span>
-                  Функциональные тренировки
+                  восстановиться после травм
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-white inline-block mr-3"></span>
-                  Реабилитация после травм
+                  вернуться в форму после перерывов
                 </li>
               </ul>
             </div>
@@ -48,7 +47,9 @@ const About: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="btn btn-outline mt-8"
             >
-              Узнать больше
+              <a href="https://t.me/masiiania" target={"_blank"}>
+                Узнать больше {'->'}
+              </a>
             </motion.button>
           </div>
           
@@ -61,7 +62,7 @@ const About: React.FC = () => {
             >
               {/* Trainer image */}
               <div className="w-full h-full flex items-center justify-center text-gray-400 bg-surface">
-                <span className="text-sm">Фото тренера в спортзале</span>
+                <img src="/IMG_0207.JPG" alt=""/>
               </div>
             </motion.div>
             

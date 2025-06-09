@@ -9,9 +9,10 @@ interface TrainingPlanProps {
   price: string;
   popular?: boolean;
   delay?: number;
+  img: string;
 }
 
-const TrainingPlan: React.FC<TrainingPlanProps> = ({ title, description, features, price, popular = false, delay = 0 }) => {
+const TrainingPlan: React.FC<TrainingPlanProps> = ({ title, description, features, price, img, popular = false, delay = 0 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -29,8 +30,8 @@ const TrainingPlan: React.FC<TrainingPlanProps> = ({ title, description, feature
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-gray-400 text-sm mb-4">{description}</p>
       
-      <div className="h-40 bg-tertiary rounded mb-4 flex items-center justify-center">
-        <span className="text-gray-500 text-sm">Фото тренировки</span>
+      <div className="h-40 w-full rounded mb-4 flex items-center justify-center overflow-hidden">
+        <img src={img} className={"w-full"}/>
       </div>
       
       <ul className="space-y-2 mb-6">
@@ -49,7 +50,10 @@ const TrainingPlan: React.FC<TrainingPlanProps> = ({ title, description, feature
           whileTap={{ scale: 0.95 }}
           className="text-sm underline"
         >
-          Подробнее
+          <a href="https://t.me/masiiania" target={"_blank"}>
+              <span> Подробнее </span>
+          </a>
+
         </motion.button>
       </div>
       
@@ -58,7 +62,9 @@ const TrainingPlan: React.FC<TrainingPlanProps> = ({ title, description, feature
         whileTap={{ scale: 0.97 }}
         className={`w-full py-2.5 rounded ${popular ? 'bg-white text-black' : 'border border-white text-white'} flex items-center justify-center`}
       >
-        <span>КУПИТЬ</span>
+        <a href="https://t.me/masiiania" target={"_blank"}>
+          <span>КУПИТЬ</span>
+        </a>
         <ArrowRight className="ml-2 w-4 h-4" />
       </motion.button>
     </motion.div>
@@ -70,36 +76,39 @@ const OnlineTraining: React.FC = () => {
     {
       title: "ПЛАН 1",
       description: "Похудение и сушка",
-      price: "4990 ₽",
+      price: "99 €",
       features: [
         "12 тренировок",
         "План питания",
         "Видеоматериалы",
         "Чат поддержки"
       ],
-      popular: true
+      popular: true,
+      img:"/img.png"
     },
     {
       title: "ПЛАН 2",
       description: "Набор мышечной массы",
-      price: "5990 ₽",
+      price: "119 €",
       features: [
         "16 тренировок",
         "План питания",
         "Видеоматериалы",
         "Чат поддержки"
-      ]
+      ],
+      img: "/img_1.png"
     },
     {
       title: "ПЛАН 3",
       description: "Функциональный тренинг",
-      price: "4490 ₽",
+      price: "99 €",
       features: [
         "10 тренировок",
         "План питания",
         "Видеоматериалы",
         "Чат поддержки"
-      ]
+      ],
+      img: "/img_2.png"
     }
   ];
 
@@ -113,9 +122,10 @@ const OnlineTraining: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">ОНЛАЙН ТРЕНИРОВКИ</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Тренируйся со мной из любой точки мира.</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Тренируйтесь в удобное время из любого места под моим профессиональным руководством
+            Покупаешь план — получаешь систему: тренировки, питание, поддержка, обратная связь.
+            Ты не просто скачиваешь файл — ты начинаешь работать с тренером.
           </p>
         </motion.div>
 
@@ -129,6 +139,7 @@ const OnlineTraining: React.FC = () => {
               price={plan.price}
               popular={plan.popular}
               delay={index * 0.1}
+              img={plan.img}
             />
           ))}
         </div>

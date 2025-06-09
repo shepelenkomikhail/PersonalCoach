@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="container-custom flex items-center justify-between py-4">
-        <a href="#" className="text-2xl font-bold">МАНЬКО</a>
+        <a href="#" className="text-2xl font-bold">MAKS FITNESS</a>
         
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
@@ -52,9 +52,9 @@ const Navbar: React.FC = () => {
         </nav>
         
         <div className="flex items-center">
-          <button className="hidden md:block btn btn-outline ml-8">
+          <a href="https://t.me/masiiania" target={"_blank"} className="hidden md:block btn btn-outline ml-8">
             Тренироваться
-          </button>
+          </a>
           
           <button 
             className="md:hidden text-white"

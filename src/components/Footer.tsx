@@ -14,9 +14,9 @@ const Footer: React.FC = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <a href="#" className="text-xl font-bold">МАНЬКО</a>
+            <a href="#" className="text-xl font-bold">MAKS FITNESS</a>
             <p className="text-gray-400 text-sm mt-2">
-              Персональный фитнес тренер в Москве
+              Персональный фитнес тренер в Европе
             </p>
           </div>
           

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, BarChart, Activity, TrendingUp } from 'lucide-react';
+import { ArrowRight, BarChart, Activity } from 'lucide-react';
 
 const TrainingPlans: React.FC = () => {
   return (
@@ -13,9 +13,10 @@ const TrainingPlans: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">ПЛАНЫ ТРЕНИРОВОК</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Структурированные программы.
+            Без воды. Без догадок.</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Выберите подходящий для вас план тренировок и начните свой путь к идеальной форме
+            Выбери то, что подойдёт именно тебе. Готовый план или персональное сопровождение — всё зависит от твоей цели и уровня.
           </p>
         </motion.div>
 
@@ -30,28 +31,28 @@ const TrainingPlans: React.FC = () => {
           >
             <h3 className="text-2xl font-bold mb-4">Готовый план</h3>
             <p className="text-gray-400 mb-6">
-              Выбери свою цель и получи готовый план тренировок прямо сейчас!
+              Хочешь начать уже сейчас? Выбирай цель — и получи чёткий пошаговый план.
             </p>
-            
+
             <div className="flex items-center space-x-6 mb-6">
               <div className="w-24 h-24 bg-tertiary rounded-lg flex items-center justify-center">
                 <BarChart className="w-10 h-10 text-white opacity-80" />
               </div>
               <div className="flex-1">
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-center">
-                    <span className="w-1.5 h-1.5 bg-white inline-block mr-2"></span>
-                    СБРОС ВЕСА
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-1.5 h-1.5 bg-white inline-block mr-2"></span>
-                    НАБОР МАССЫ
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-1.5 h-1.5 bg-white inline-block mr-2"></span>
-                    ПОДДЕРЖАНИЕ ФОРМЫ
-                  </li>
-                </ul>
+                <form className="space-y-2 text-gray-300">
+                  <label className="flex items-center space-x-2">
+                    <input type="checkbox" className="form-checkbox accent-primary" />
+                    <span>СБРОС ВЕСА</span>
+                  </label>
+                  <label className="flex items-center space-x-2">
+                    <input type="checkbox" className="form-checkbox accent-primary" />
+                    <span>НАБОР МАССЫ</span>
+                  </label>
+                  <label className="flex items-center space-x-2">
+                    <input type="checkbox" className="form-checkbox accent-primary" />
+                    <span>ПОДДЕРЖАНИЕ ФОРМЫ</span>
+                  </label>
+                </form>
               </div>
             </div>
             
@@ -60,7 +61,9 @@ const TrainingPlans: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="btn btn-primary flex items-center justify-center mx-auto"
             >
-              <span>ПОЛУЧИТЬ</span>
+              <a href="https://t.me/masiiania" target={"_blank"}>
+                <span>ПОЛУЧИТЬ</span>
+              </a>
               <ArrowRight className="ml-2 w-4 h-4" />
             </motion.button>
           </motion.div>
@@ -75,7 +78,7 @@ const TrainingPlans: React.FC = () => {
           >
             <h3 className="text-2xl font-bold mb-4">Индивидуальный план</h3>
             <p className="text-gray-400 mb-6">
-              БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ и детальная проработка плана под ваши цели
+              Под тебя. Под твой ритм. Под твою цель.
             </p>
             
             <div className="flex items-center space-x-6 mb-6">
@@ -109,7 +112,9 @@ const TrainingPlans: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="btn btn-outline flex items-center justify-center mx-auto"
             >
-              <span>ЗАПОЛНИТЬ АНКЕТУ</span>
+              <a href="https://t.me/masiiania" target={"_blank"}>
+                <span>ЗАПОЛНИТЬ АНКЕТУ</span>
+              </a>
               <ArrowRight className="ml-2 w-4 h-4" />
             </motion.button>
           </motion.div>

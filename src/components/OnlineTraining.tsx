@@ -108,12 +108,12 @@ const OnlineTraining: React.FC = () => {
         "Видеоматериалы",
         "Чат поддержки"
       ],
-      img: "/img_2.png"
+      img: "/img_2.jpg"
     }
   ];
 
   return (
-    <section id="online" className="section-padding relative overflow-hidden">
+    <section id="online" className="section-padding relative overflow-hidden bg-[rgb(18,18,18)]">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

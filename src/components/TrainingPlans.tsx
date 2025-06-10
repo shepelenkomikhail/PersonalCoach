@@ -4,7 +4,7 @@ import { ArrowRight, BarChart, Activity } from 'lucide-react';
 
 const TrainingPlans: React.FC = () => {
   return (
-    <section id="plans" className="section-padding bg-secondary relative overflow-hidden">
+    <section id="plans" className="section-padding  relative overflow-hidden">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ const TrainingPlans: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="bg-surface p-8 rounded-lg"
+            className="bg-surface p-4 md:p-8 rounded-lg"
           >
             <h3 className="text-2xl font-bold mb-4">Готовый план</h3>
             <p className="text-gray-400 mb-6">

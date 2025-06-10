@@ -13,17 +13,17 @@ const Footer: React.FC = () => {
     <footer className="bg-black py-10 border-t border-gray-800">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
+          <div className="mb-0 md:mb-0">
             <a href="#" className="text-xl font-bold">MAKS FITNESS</a>
             <p className="text-gray-400 text-sm mt-2">
               Персональный фитнес тренер в Европе
             </p>
           </div>
           
-          <div className="flex flex-col items-center md:items-end">
+          <div className="flex md:flex-col gap-4 md:gap-0 items-center md:items-end">
             <button 
               onClick={scrollToTop}
-              className="w-10 h-10 bg-tertiary rounded-full flex items-center justify-center mb-4 hover:bg-surface transition-colors"
+              className="w-10 h-10 bg-tertiary rounded-full flex items-center justify-center mb-0 md:mb-4 hover:bg-surface transition-colors"
               aria-label="Scroll to top"
             >
               <ArrowUp className="w-5 h-5" />

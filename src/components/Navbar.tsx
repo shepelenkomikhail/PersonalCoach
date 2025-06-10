@@ -27,6 +27,7 @@ const Navbar: React.FC = () => {
     { name: 'Обо мне', href: '#about' },
     { name: 'Планы тренировок', href: '#plans' },
     { name: 'Онлайн тренировки', href: '#online' },
+    { name: 'Отзывы', href: '#feedbacks' },
     { name: 'Контакты', href: '#contact' },
   ];
 

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="section-padding relative overflow-hidden">
+    <section id="about" className="section-padding relative overflow-hidden bg-[rgb(18,18,18)]">
       <div className="container-custom">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -58,11 +58,11 @@ const About: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="aspect-[4/5] bg-tertiary rounded-md overflow-hidden"
+              className="aspect-[4/5] rounded-md overflow-hidden"
             >
               {/* Trainer image */}
-              <div className="w-full h-full flex items-center justify-center text-gray-400 bg-surface">
-                <img src="/IMG_0207.JPG" alt=""/>
+              <div className="w-full h-full flex items-center justify-center text-gray-400">
+                <img src="/IMG_0207.JPG" alt="" className="rounded-md mb-5 opacity-80 h-[500px] md:h-[700px]" />
               </div>
             </motion.div>
             

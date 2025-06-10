@@ -5,6 +5,7 @@ import TrainingPlans from './components/TrainingPlans';
 import OnlineTraining from './components/OnlineTraining';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Feedbacks from "./components/Feedbacks.tsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <About />
         <TrainingPlans />
         <OnlineTraining />
+          <Feedbacks />
         <Contact />
       </main>
       <Footer />

@@ -1,5 +1,5 @@
-import crypto from "crypto.js";
-import http from "http.js";
+const crypto = require("crypto");
+const http = require("http");
 
 function generateSignature({ m_shop, m_orderid, m_amount, m_curr, m_desc, m_key }) {
     const signString = [m_shop, m_orderid, m_amount, m_curr, m_desc, m_key].join(":");
@@ -61,7 +61,8 @@ const server = http.createServer((req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
+
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

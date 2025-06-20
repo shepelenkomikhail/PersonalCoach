@@ -27,7 +27,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({icon, title, description, dela
                     transition-all h-full flex flex-col items-center text-center
                     ${mobileVersion ?
               'p-3 w-full h-32' :
-              'p-6 w-64 h-48'} ${link == "#online"? 'border-orange-500' : ''}
+              'p-6 w-64 h-48'} ${link == "#online"? 'border-[#f97316]' : ''}
                 `} >
             <div className={`${mobileVersion ? 'text-xl mb-2' : 'text-3xl mb-4'}`}>
               {React.cloneElement(icon as React.ReactElement, {

@@ -16,7 +16,7 @@ export default function PayButton({ text, popular, amount, description }: PayBut
         setLoading(true);
 
         try {
-            const res = await fetch("http://localhost:3000/create-payment", {
+            const res = await fetch("https://coach-back-2nvwvq.fly.dev", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ amount, description }),

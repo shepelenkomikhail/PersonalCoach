@@ -1,6 +1,5 @@
-import crypto from "crypto";
-import http from "http";
-import cors from "cors";
+import crypto from "crypto.js";
+import http from "http.js";
 
 function generateSignature({ m_shop, m_orderid, m_amount, m_curr, m_desc, m_key }) {
     const signString = [m_shop, m_orderid, m_amount, m_curr, m_desc, m_key].join(":");
@@ -32,7 +31,7 @@ const server = http.createServer((req, res) => {
 
             const m_orderid = "order_" + Date.now();
             const m_amount = parseFloat(amount).toFixed(2);
-            const m_curr = "USD";
+            const m_curr = "EUR";
             const m_desc = Buffer.from(description).toString("base64");
 
             const m_sign = generateSignature({
@@ -62,7 +61,9 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(3000, () => {
-    console.log("Server running on http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
+
 

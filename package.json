@@ -20,6 +20,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^7.6.2",
     "shadcn": "^2.6.1",
     "tailwind-merge": "^3.3.0",
     "tailwind-variants": "^1.0.0",

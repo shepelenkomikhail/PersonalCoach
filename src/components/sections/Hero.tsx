@@ -1,5 +1,5 @@
 import React from 'react';
-import ServiceCard from './ServiceCard';
+import ServiceCard from '../ServiceCard.tsx';
 import { Dumbbell, Calendar, Video, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
       icon: <Video className="h-8 w-8 mb-2" />,
       title: 'Онлайн тренировки',
       description: 'Тренируйтесь из любого места в любое время',
-      link: "#plans"
+      link: "#online"
     },
     {
       icon: <Users className="h-8 w-8 mb-2" />,

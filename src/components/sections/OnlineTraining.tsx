@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import {trainingPlans} from "../../info/trainingPlans.ts";
+import InfoDialog from "../InfoDialog.tsx";
+import PayButton from "../PayButton.tsx";
 
 interface TrainingPlanProps {
   title: string;
   description: string;
   features: string[];
-  price: string;
+  price: number;
   popular?: boolean;
   delay?: number;
   img: string;
+  onMoreInfoClick?: () => void;
 }
 
-const TrainingPlan: React.FC<TrainingPlanProps> = ({ title, description, features, price, img, popular = false, delay = 0 }) => {
+const TrainingPlan: React.FC<TrainingPlanProps> = ({ title, description, features, price, img, popular = false, delay = 0, onMoreInfoClick }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -26,14 +29,14 @@ const TrainingPlan: React.FC<TrainingPlanProps> = ({ title, description, feature
           ПОПУЛЯРНЫЙ
         </div>
       )}
-      
+
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-gray-400 text-sm mb-4">{description}</p>
-      
+
       <div className="h-40 w-full rounded mb-4 flex items-center justify-center overflow-hidden">
         <img src={img} className={"w-full"}/>
       </div>
-      
+
       <ul className="space-y-2 mb-6">
         {features.map((feature, index) => (
           <li key={index} className="text-gray-300 text-sm flex items-start">
@@ -42,75 +45,26 @@ const TrainingPlan: React.FC<TrainingPlanProps> = ({ title, description, feature
           </li>
         ))}
       </ul>
-      
+
       <div className="flex items-center justify-between mb-4">
-        <span className="text-xl font-bold">{price}</span>
+        <span className="text-xl font-bold">{price} €</span>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="text-sm underline"
+          onClick={onMoreInfoClick}
         >
-          <a href="https://t.me/masiiania" target={"_blank"}>
-              <span> Подробнее </span>
-          </a>
-
+          <span> Подробнее </span>
         </motion.button>
       </div>
-      
-      <motion.button
-        whileHover={{ scale: 1.03 }}
-        whileTap={{ scale: 0.97 }}
-        className={`w-full py-2.5 rounded ${popular ? 'bg-white text-black' : 'border border-white text-white'} flex items-center justify-center`}
-      >
-        <a href="https://t.me/masiiania" target={"_blank"}>
-          <span>КУПИТЬ</span>
-        </a>
-        <ArrowRight className="ml-2 w-4 h-4" />
-      </motion.button>
+
+      <PayButton text={"КУПИТЬ"} popular={true} amount={price} description={description} />
     </motion.div>
   );
 };
 
 const OnlineTraining: React.FC = () => {
-  const trainingPlans = [
-    {
-      title: "ПЛАН 1",
-      description: "Похудение и сушка",
-      price: "99 €",
-      features: [
-        "12 тренировок",
-        "План питания",
-        "Видеоматериалы",
-        "Чат поддержки"
-      ],
-      popular: true,
-      img:"/img.png"
-    },
-    {
-      title: "ПЛАН 2",
-      description: "Набор мышечной массы",
-      price: "119 €",
-      features: [
-        "16 тренировок",
-        "План питания",
-        "Видеоматериалы",
-        "Чат поддержки"
-      ],
-      img: "/img_1.png"
-    },
-    {
-      title: "ПЛАН 3",
-      description: "Функциональный тренинг",
-      price: "99 €",
-      features: [
-        "10 тренировок",
-        "План питания",
-        "Видеоматериалы",
-        "Чат поддержки"
-      ],
-      img: "/img_2.jpg"
-    }
-  ];
+  const [showDialog, setShowDialog] = useState(false);
 
   return (
     <section id="online" className="section-padding relative overflow-hidden bg-[rgb(18,18,18)]">
@@ -140,13 +94,18 @@ const OnlineTraining: React.FC = () => {
               popular={plan.popular}
               delay={index * 0.1}
               img={plan.img}
+              onMoreInfoClick={() => setShowDialog(true)}
             />
           ))}
         </div>
       </div>
-      
+
       {/* Background elements */}
       <div className="absolute -z-10 bottom-0 left-1/4 w-64 h-64 bg-tertiary rounded-full opacity-10 blur-3xl"></div>
+
+      {showDialog && (
+        <InfoDialog setShowDialog={setShowDialog} />
+      )}
     </section>
   );
 };

@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
         </nav>
         
         <div className="flex items-center">
-          <a href="https://t.me/masiiania" target={"_blank"} className="hidden md:block btn btn-outline ml-8">
+          <a href="#online" className="hidden md:block btn btn-outline ml-8">
             Тренироваться
           </a>
           

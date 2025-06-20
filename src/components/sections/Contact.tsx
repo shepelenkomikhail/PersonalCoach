@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Instagram} from 'lucide-react';
-import { sendEmail } from '../emailService.ts';
+import { sendEmail } from '../../emailService.ts';
 
 const Contact: React.FC = () => {
   const [statusMessage, setStatusMessage] = useState('');

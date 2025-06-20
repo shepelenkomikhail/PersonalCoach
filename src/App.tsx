@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import TrainingPlans from './components/TrainingPlans';
-import OnlineTraining from './components/OnlineTraining';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Feedbacks from "./components/Feedbacks.tsx";
-import PaymentSuccess from './components/PaymentSuccess';
-import PaymentFail from './components/PaymentFail';
-import PaymentStatus from './components/PaymentStatus';
+import Navbar from './components/sections/Navbar.tsx';
+import Hero from './components/sections/Hero.tsx';
+import About from './components/sections/About.tsx';
+import TrainingPlans from './components/sections/TrainingPlans.tsx';
+import OnlineTraining from './components/sections/OnlineTraining.tsx';
+import Contact from './components/sections/Contact.tsx';
+import Footer from './components/sections/Footer.tsx';
+import Feedbacks from "./components/sections/Feedbacks.tsx";
+import PaymentSuccess from './components/payments/PaymentSuccess.tsx';
+import PaymentFail from './components/payments/PaymentFail.tsx';
+import PaymentStatus from './components/payments/PaymentStatus.tsx';
 
 function App() {
   return (

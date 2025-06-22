@@ -143,20 +143,45 @@ const Carousel = React.forwardRef<
           {children}
 
             {/* Индикаторы для мобильных */}
-            <div className=" flex justify-center gap-2 mt-4">
-                {React.Children.map(children, (_, index) => (
-                    <button
-                        type="button"
-                        onClick={() => api?.scrollTo(index)}
-                        className={cn(
-                            "w-2 h-2 rounded-full transition-all",
-                            api?.selectedScrollSnap() === index
-                                ? "bg-primary w-4"
-                                : "bg-gray-300"
-                        )}
-                        aria-label={`Go to slide ${index + 1}`}
-                    />
-                ))}
+            {/* Индикаторы и кнопки снизу */}
+            <div className="flex items-center justify-center gap-4 mt-6">
+                <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-6 w-6 md:hidden"
+                    onClick={() => api?.scrollPrev()}
+                    disabled={!canScrollPrev}
+                >
+                    <ArrowLeft className="h-4 w-4 text-muted-foreground" />
+                    <span className="sr-only">Previous slide</span>
+                </Button>
+
+                <div className="flex gap-2">
+                    {React.Children.map(children, (_, index) => (
+                        <button
+                            type="button"
+                            onClick={() => api?.scrollTo(index)}
+                            className={cn(
+                                "w-2 h-2 rounded-full transition-all",
+                                api?.selectedScrollSnap() === index
+                                    ? "bg-primary w-4"
+                                    : "bg-gray-300"
+                            )}
+                            aria-label={`Go to slide ${index + 1}`}
+                        />
+                    ))}
+                </div>
+
+                <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-6 w-6 md:hidden"
+                    onClick={() => api?.scrollNext()}
+                    disabled={!canScrollNext}
+                >
+                    <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                    <span className="sr-only">Next slide</span>
+                </Button>
             </div>
         </div>
       </CarouselContext.Provider>

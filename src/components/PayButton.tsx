@@ -60,6 +60,25 @@ export default function PayButton({ text, popular, amount, description }: PayBut
         closeDialog();
     };
 
+    const handleTgPayment = () => {
+        // Логика оплаты для РФ через Telegram
+        switch (amount){
+            case 59:
+                window.open("https://t.me/maksym_fitnes", "_blank");
+                break;
+            case 109:
+                window.open("https://t.me/maksym_fitnes", "_blank");
+                break;
+            case 169:
+                window.open("https://t.me/maksym_fitnes", "_blank");
+                break;
+            default:
+                alert("Неизвестный тариф");
+                return;
+        }
+        closeDialog();
+    }
+
 
     return (
         <>
@@ -103,6 +122,12 @@ export default function PayButton({ text, popular, amount, description }: PayBut
                                     className="bg-black text-white py-2 rounded hover:bg-gray-900 transition"
                                 >
                                     Оплата картой
+                                </button>
+                                <button
+                                    onClick={handleTgPayment}
+                                    className="bg-black text-white py-2 rounded hover:bg-gray-900 transition"
+                                >
+                                    Оплата для РФ
                                 </button>
                                 <button
                                     onClick={closeDialog}

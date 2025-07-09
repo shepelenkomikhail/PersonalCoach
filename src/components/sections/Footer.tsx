@@ -1,7 +1,10 @@
 import React from 'react';
 import { ArrowUp } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -14,9 +17,9 @@ const Footer: React.FC = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-0 md:mb-0">
-            <a href="#" className="text-xl font-bold">MAKS FITNESS</a>
+            <a href="#" className="text-xl font-bold">{t('footer.brand')}</a>
             <p className="text-gray-400 text-sm mt-2">
-              Персональный фитнес тренер в Европе
+              {t('footer.description')}
             </p>
           </div>
           
@@ -29,7 +32,7 @@ const Footer: React.FC = () => {
               <ArrowUp className="w-5 h-5" />
             </button>
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Максим Манько. Все права защищены.
+              © {new Date().getFullYear()} {t('footer.rights')}
             </p>
           </div>
         </div>

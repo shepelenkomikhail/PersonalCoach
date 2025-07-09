@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="section-padding relative overflow-hidden bg-[rgb(18,18,18)]">
       <div className="container-custom">
@@ -13,31 +16,29 @@ const About: React.FC = () => {
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">МАКСИМ МАНЬКО</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('about.name')}</h2>
             <p className="text-gray-300 mb-8 leading-relaxed">
-              Я — персональный тренер, который не ведёт клиентов вслепую.
-              Моя задача — не просто составить план, а помочь тебе построить сильное тело и железную дисциплину.
-              Каждый план я подстраиваю под тебя: цели, занятость, предпочтения, уровень подготовки.
+              {t('about.description')}
             </p>
-            
+
             <div className="mt-8">
-              <h3 className="text-2xl font-semibold mb-4">Работаю с теми, кто хочет:</h3>
+              <h3 className="text-2xl font-semibold mb-4">{t('about.workWith')}</h3>
               <ul className="text-gray-300 space-y-2">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-white inline-block mr-3"></span>
-                   снизить вес без жёстких ограничений
+                  {t('about.goals.weightLoss')}
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-white inline-block mr-3"></span>
-                   набрать массу с сохранением подвижности
+                  {t('about.goals.gainMass')}
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-white inline-block mr-3"></span>
-                  восстановиться после травм
+                  {t('about.goals.recovery')}
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-white inline-block mr-3"></span>
-                  вернуться в форму после перерывов
+                  {t('about.goals.returnForm')}
                 </li>
               </ul>
             </div>
@@ -48,7 +49,7 @@ const About: React.FC = () => {
               className="btn btn-outline mt-8"
             >
               <a href="https://t.me/masiiania" target={"_blank"}>
-                Узнать больше {'->'}
+                {t('about.learnMore')} {'->'}
               </a>
             </motion.button>
           </div>

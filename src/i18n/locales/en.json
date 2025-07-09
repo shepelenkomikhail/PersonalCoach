@@ -1,0 +1,211 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "plans": "Training Plans",
+    "online": "Online Training",
+    "feedbacks": "Reviews",
+    "contact": "Contact",
+    "train": "Train"
+  },
+  "hero": {
+    "title": "The shape you'll be proud of",
+    "description": "Individual training and nutrition plans tailored to your goal.",
+    "descriptionFull": "Individual training and nutrition plans, developed personally for your goal. Results are not a coincidence, but a system.",
+    "getConsultation": "GET CONSULTATION",
+    "services": {
+      "bio": {
+        "title": "Bio",
+        "description": "Learn more about my experience and approach"
+      },
+      "plans": {
+        "title": "Training Plan",
+        "description": "Individual programs for your goals"
+      },
+      "online": {
+        "title": "Online Training",
+        "description": "Train from anywhere at any time"
+      },
+      "channel": {
+        "title": "Private Channel",
+        "description": "Exclusive content for subscribers"
+      }
+    }
+  },
+  "about": {
+    "name": "MAKSYM MANKO",
+    "description": "I am a personal trainer who doesn't lead clients blindly. My task is not just to create a plan, but to help you build a strong body and iron discipline. I customize each plan for you: goals, schedule, preferences, fitness level.",
+    "workWith": "I work with those who want to:",
+    "goals": {
+      "weightLoss": "lose weight without strict restrictions",
+      "gainMass": "gain mass while maintaining mobility",
+      "recovery": "recover from injuries",
+      "returnForm": "get back in shape after breaks"
+    },
+    "learnMore": "Learn more"
+  },
+  "trainingPlans": {
+    "title": "Structured programs. No fluff. No guesswork.",
+    "description": "Choose what suits you. Ready plan or personal support — everything depends on your goal and level.",
+    "ready": {
+      "title": "Ready plan",
+      "description": "Want to start right now? Choose your goal — and get a clear step-by-step plan.",
+      "goals": {
+        "weightLoss": "WEIGHT LOSS",
+        "gainMass": "MASS GAIN",
+        "maintain": "MAINTAIN SHAPE"
+      }
+    },
+    "individual": {
+      "title": "Individual plan",
+      "subtitle": "For you. For your rhythm. For your goal.",
+      "features": {
+        "analysis": "Physical fitness analysis",
+        "personalPlan": "Personal program",
+        "nutrition": "Regular adjustments",
+        "support": "24/7 support"
+      }
+    },
+    "fillForm": "FILL OUT FORM",
+    "getAccess": "GET ACCESS"
+  },
+  "onlineTraining": {
+    "title": "Train with me from anywhere in the world.",
+    "description": "Buy a plan — get a system: workouts, nutrition, support, feedback. You don't just download a file — you start working with a trainer.",
+    "plans": {
+      "solo": {
+        "title": "SOLO",
+        "description": "I want to try on my own, without a group",
+        "features": [
+          "Audio guides and podcasts",
+          "Practices",
+          "Nutrition assignments",
+          "Mindset assignments"
+        ]
+      },
+      "team": {
+        "title": "TEAM",
+        "description": "I need support, feeling of movement with others",
+        "features": [
+          "Audio guides and podcasts",
+          "Practices",
+          "Nutrition assignments",
+          "Mindset assignments",
+          "Access to private group with curator",
+          "Exercise technique check by curator",
+          "Separate private chat for girls/guys"
+        ]
+      },
+      "individual": {
+        "title": "INDIVIDUAL APPROACH",
+        "description": "I want personal control and support from Maksym",
+        "features": [
+          "Audio guides and podcasts",
+          "Practices",
+          "Nutrition assignments",
+          "Mindset assignments",
+          "Access to private group with curator",
+          "Exercise technique check by curator",
+          "Separate private chat for girls/guys",
+          "Daily feedback from Maksym",
+          "Individual analysis of your workouts and nutrition"
+        ]
+      }
+    },
+    "moreInfo": "More info",
+    "choosePayment": "Choose payment method",
+    "buy": "BUY"
+  },
+  "contact": {
+    "title": "CONTACT ME",
+    "description": "Have questions? Write to me, and I'll respond soon",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "message": "Message",
+      "messagePlaceholder": "Enter your message",
+      "send": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent!",
+      "error": "Sending error"
+    },
+    "info": {
+      "title": "Contact information",
+      "phone": "Phone",
+      "location": "Warsaw, Poland",
+      "workingHours": "Working hours",
+      "socialMedia": "Social media",
+      "schedule": {
+        "weekdays": "Mon-Fri: 9:00 - 20:00",
+        "weekends": "Sat-Sun: 10:00 - 18:00"
+      }
+    }
+  },
+  "footer": {
+    "brand": "MAKS FITNESS",
+    "description": "Personal fitness trainer in Europe",
+    "rights": "Maksym Manko. All rights reserved."
+  },
+  "payment": {
+    "success": {
+      "title": "Payment successful!",
+      "thanks": "Thank you for your purchase!",
+      "instruction": "Send me a payment screenshot and I'll give you access."
+    },
+    "fail": {
+      "title": "Payment error",
+      "message": "Something went wrong. Please try again.",
+      "retry": "Try again"
+    },
+    "status": {
+      "title": "Payment Status",
+      "processing": "Your payment is being processed. Please wait...",
+      "home": "Home"
+    },
+    "methods": {
+      "crypto": "Cryptocurrency",
+      "card": "Bank card",
+      "telegram": "Telegram (RF)"
+    },
+    "errors": {
+      "unknownPlan": "Unknown plan"
+    }
+  },
+  "feedbacks": {
+    "title": "CLIENT REVIEWS"
+  },
+  "common": {
+    "popular": "Popular",
+    "euro": "€",
+    "loading": "Loading...",
+    "close": "Close"
+  },
+  "infoDialog": {
+    "title": "PRODUCT METHODOLOGY: «Body Transformation»",
+    "product": "Product:",
+    "productDescription": "Body mass gain course with support and feedback in telegram channel!",
+    "mainIdea": "Main idea:",
+    "goals": [
+      "Develop and strengthen muscles, increase their volume and strength",
+      "Achieve a healthy and aesthetic body",
+      "Enjoy workouts and don't lose motivation",
+      "Don't gain excess fat, gain mass",
+      "Learn to eat without guilt and anxiety",
+      "Formulate a clear system that will stay with you for life"
+    ],
+    "includes": "What's included:",
+    "includesList": [
+      "Ready plan of effective workouts for a month",
+      "Balanced menu",
+      "Access to TG channel with product basket and KBJU",
+      "Recipes, tips, tricks",
+      "Workouts for home and gym"
+    ],
+    "format": "Format:",
+    "formatDescription": "The course is divided into 4 modules (1 per week), each module — video lessons, materials and assignments.",
+    "tariffs": "Tariffs:",
+    "price": "Price"
+  }
+}

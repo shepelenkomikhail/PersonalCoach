@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../LanguageSwitcher';
 
 const Navbar: React.FC = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -23,12 +26,12 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { name: 'Главная', href: '#' },
-    { name: 'Обо мне', href: '#about' },
-    { name: 'Планы тренировок', href: '#plans' },
-    { name: 'Онлайн тренировки', href: '#online' },
-    { name: 'Отзывы', href: '#feedbacks' },
-    { name: 'Контакты', href: '#contact' },
+    { name: t('nav.home'), href: '#' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.plans'), href: '#plans' },
+    { name: t('nav.online'), href: '#online' },
+    { name: t('nav.feedbacks'), href: '#feedbacks' },
+    { name: t('nav.contact'), href: '#contact' },
   ];
 
   return (
@@ -52,12 +55,13 @@ const Navbar: React.FC = () => {
           ))}
         </nav>
         
-        <div className="flex items-center">
-          <a href="#online" className="hidden md:block btn btn-outline ml-8">
-            Тренироваться
+        <div className="flex items-center space-x-4">
+          <LanguageSwitcher />
+          <a href="#online" className="hidden md:block btn btn-outline">
+            {t('nav.train')}
           </a>
-          
-          <button 
+
+          <button
             className="md:hidden text-white"
             onClick={toggleMenu}
             aria-label="Toggle menu"
@@ -82,7 +86,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <button className="btn btn-outline self-start">
-              Тренироваться
+              {t('nav.train')}
             </button>
           </div>
         </div>

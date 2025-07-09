@@ -1,0 +1,211 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "about": "O mnie",
+    "plans": "Plany treningowe",
+    "online": "Treningi online",
+    "feedbacks": "Opinie",
+    "contact": "Kontakt",
+    "train": "Trenować"
+  },
+  "hero": {
+    "title": "Forma, z której będziesz dumny",
+    "description": "Indywidualne plany treningowe i żywieniowe dopasowane do Twoich celów.",
+    "descriptionFull": "Indywidualne plany treningowe i żywieniowe, opracowane specjalnie pod Twoje cele. Wynik to nie przypadek, ale system.",
+    "getConsultation": "UZYSKAJ KONSULTACJĘ",
+    "services": {
+      "bio": {
+        "title": "Bio",
+        "description": "Dowiedz się więcej o moim doświadczeniu i podejściu"
+      },
+      "plans": {
+        "title": "Plan treningowy",
+        "description": "Indywidualne programy dla Twoich celów"
+      },
+      "online": {
+        "title": "Treningi online",
+        "description": "Trenuj z dowolnego miejsca o dowolnej porze"
+      },
+      "channel": {
+        "title": "Zamknięty kanał",
+        "description": "Ekskluzywne treści dla subskrybentów"
+      }
+    }
+  },
+  "about": {
+    "name": "MAKSYM MANKO",
+    "description": "Jestem trenerem personalnym, który nie prowadzi klientów na ślepo. Moim zadaniem nie jest tylko stworzenie planu, ale pomoc w zbudowaniu silnego ciała i żelaznej dyscypliny. Każdy plan dostosowuję do Ciebie: cele, zajętość, preferencje, poziom przygotowania.",
+    "workWith": "Pracuję z tymi, którzy chcą:",
+    "goals": {
+      "weightLoss": "schudnąć bez surowych ograniczeń",
+      "gainMass": "nabrać masę zachowując mobilność",
+      "recovery": "powrócić do zdrowia po kontuzjach",
+      "returnForm": "wrócić do formy po przerwach"
+    },
+    "learnMore": "Dowiedz się więcej"
+  },
+  "trainingPlans": {
+    "title": "Ustrukturyzowane programy. Bez wody. Bez domysłów.",
+    "description": "Wybierz to, co będzie odpowiednie właśnie dla Ciebie. Gotowy plan lub osobiste wsparcie — wszystko zależy od Twojego celu i poziomu.",
+    "ready": {
+      "title": "Gotowy plan",
+      "description": "Chcesz zacząć już teraz? Wybierz cel — i otrzymaj jasny plan krok po kroku.",
+      "goals": {
+        "weightLoss": "UTRATA WAGI",
+        "gainMass": "PRZYROST MASY",
+        "maintain": "UTRZYMANIE FORMY"
+      }
+    },
+    "individual": {
+      "title": "Indywidualny plan",
+      "subtitle": "Pod Ciebie. Pod Twój rytm. Pod Twój cel.",
+      "features": {
+        "analysis": "Analiza kondycji fizycznej",
+        "personalPlan": "Personalny program",
+        "nutrition": "Regularne korekty",
+        "support": "Wsparcie 24/7"
+      }
+    },
+    "fillForm": "WYPEŁNIJ ANKIETĘ",
+    "getAccess": "UZYSKAJ"
+  },
+  "onlineTraining": {
+    "title": "Trenuj ze mną z dowolnego miejsca na świecie.",
+    "description": "Kupujesz plan — otrzymujesz system: treningi, żywienie, wsparcie, informacja zwrotna. Nie tylko pobierasz plik — zaczynasz pracować z trenerem.",
+    "plans": {
+      "solo": {
+        "title": "SAM/A",
+        "description": "Chcę spróbować sam/a, bez grupy",
+        "features": [
+          "Przewodniki audio i podcasty",
+          "Praktyki",
+          "Zadania żywieniowe",
+          "Zadania myślowe"
+        ]
+      },
+      "team": {
+        "title": "ZESPÓŁ",
+        "description": "Potrzebuję wsparcia, poczucia ruchu z innymi",
+        "features": [
+          "Przewodniki audio i podcasty",
+          "Praktyki",
+          "Zadania żywieniowe",
+          "Zadania myślowe",
+          "Dostęp do zamkniętej grupy z kuratorem",
+          "Sprawdzanie techniki wykonywania ćwiczeń przez kuratora",
+          "Oddzielny zamknięty czat dla dziewczyn/chłopaków"
+        ]
+      },
+      "individual": {
+        "title": "INDYWIDUALNE PODEJŚCIE",
+        "description": "Chcę personalną kontrolę i wsparcie od Maksyma",
+        "features": [
+          "Przewodniki audio i podcasty",
+          "Praktyki",
+          "Zadania żywieniowe",
+          "Zadania myślowe",
+          "Dostęp do zamkniętej grupy z kuratorem",
+          "Sprawdzanie techniki wykonywania ćwiczeń przez kuratora",
+          "Oddzielny zamknięty czat dla dziewczyn/chłopaków",
+          "Codzienna informacja zwrotna od Maksyma",
+          "Indywidualna analiza Twoich treningów i żywienia"
+        ]
+      }
+    },
+    "moreInfo": "Więcej informacji",
+    "choosePayment": "Wybierz sposób płatności",
+    "buy": "KUP"
+  },
+  "contact": {
+    "title": "SKONTAKTUJ SIĘ ZE MNĄ",
+    "description": "Masz pytania? Napisz do mnie, a odpowiem w najbliższym czasie",
+    "form": {
+      "name": "Imię",
+      "namePlaceholder": "Wprowadź swoje imię",
+      "email": "Email",
+      "emailPlaceholder": "Wprowadź swój email",
+      "message": "Wiadomość",
+      "messagePlaceholder": "Wprowadź swoją wiadomość",
+      "send": "Wyślij wiadomość",
+      "sending": "Wysyłanie...",
+      "success": "Wiadomość wysłana!",
+      "error": "Błąd wysyłania"
+    },
+    "info": {
+      "title": "Informacje kontaktowe",
+      "phone": "Telefon",
+      "location": "Warszawa, Polska",
+      "workingHours": "Godziny pracy",
+      "socialMedia": "Media społecznościowe",
+      "schedule": {
+        "weekdays": "Pn-Pt: 9:00 - 20:00",
+        "weekends": "Sb-Nd: 10:00 - 18:00"
+      }
+    }
+  },
+  "footer": {
+    "brand": "MAKS FITNESS",
+    "description": "Personalny trener fitness w Europie",
+    "rights": "Maksym Manko. Wszelkie prawa zastrzeżone."
+  },
+  "payment": {
+    "success": {
+      "title": "Płatność udana!",
+      "thanks": "Dziękuję za zakup!",
+      "instruction": "Wyślij mi zrzut ekranu płatności, a dam Ci dostęp."
+    },
+    "fail": {
+      "title": "Błąd płatności",
+      "message": "Coś poszło nie tak. Spróbuj ponownie.",
+      "retry": "Spróbuj ponownie"
+    },
+    "status": {
+      "title": "Status płatności",
+      "processing": "Twoja płatność jest przetwarzana. Proszę czekać...",
+      "home": "Na stronę główną"
+    },
+    "methods": {
+      "crypto": "Kryptowaluta",
+      "card": "Karta bankowa",
+      "telegram": "Telegram (RF)"
+    },
+    "errors": {
+      "unknownPlan": "Nieznany plan"
+    }
+  },
+  "feedbacks": {
+    "title": "OPINIE KLIENTÓW"
+  },
+  "common": {
+    "popular": "Popularny",
+    "euro": "€",
+    "loading": "Ładowanie...",
+    "close": "Zamknij"
+  },
+  "infoDialog": {
+    "title": "METODOLOGIA PRODUKTU: «Transformacja ciała»",
+    "product": "Produkt:",
+    "productDescription": "Kurs na przyrost masy ciała ze wsparciem i informacją zwrotną na kanale Telegram!",
+    "mainIdea": "Główna idea:",
+    "goals": [
+      "Rozwijać i wzmacniać mięśnie, zwiększać ich objętość i siłę",
+      "Osiągnąć zdrowe i estetyczne ciało",
+      "Cieszyć się treningami i nie tracić motywacji",
+      "Nie nabierać zbędnego tłuszczu, nabierać masę",
+      "Nauczyć się jeść bez poczucia winy i niepokoju",
+      "Sformułować jasny system, który zostanie z tobą na całe życie"
+    ],
+    "includes": "Co zawiera:",
+    "includesList": [
+      "Gotowy plan skutecznych treningów na miesiąc",
+      "Zbilansowane menu",
+      "Dostęp do kanału TG z koszykiem produktów i KBŻU",
+      "Przepisy, porady, sztuczki",
+      "Treningi do domu i na siłownię"
+    ],
+    "format": "Format:",
+    "formatDescription": "Kurs dzieli się na 4 moduły (po 1 tygodniowo), każdy moduł — filmy instruktażowe, materiały i zadania.",
+    "tariffs": "Taryfy:",
+    "price": "Cena"
+  }
+}

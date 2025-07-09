@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 type PayButtonProps = {
     text: string;
@@ -10,6 +11,7 @@ type PayButtonProps = {
 };
 
 export default function PayButton({ text, popular, amount, description }: PayButtonProps) {
+    const { t } = useTranslation();
     const [loading, setLoading] = useState(false);
     const [showDialog, setShowDialog] = useState(false);
 
@@ -34,7 +36,7 @@ export default function PayButton({ text, popular, amount, description }: PayBut
                 window.open("https://plisio.net/payment-button/new/U-OeiwJShbFU", "_blank");
                 break;
             default:
-                alert("Неизвестный тариф");
+                alert(t('payment.errors.unknownPlan'));
                 return;
         }
 
@@ -54,7 +56,7 @@ export default function PayButton({ text, popular, amount, description }: PayBut
                 window.open("https://buymeacoffee.com/maxfitness/e/424092", "_blank");
                 break;
             default:
-                alert("Неизвестный тариф");
+                alert(t('payment.errors.unknownPlan'));
                 return;
         }
         closeDialog();
@@ -73,7 +75,7 @@ export default function PayButton({ text, popular, amount, description }: PayBut
                 window.open("https://t.me/maksym_fitnes", "_blank");
                 break;
             default:
-                alert("Неизвестный тариф");
+                alert(t('payment.errors.unknownPlan'));
                 return;
         }
         closeDialog();
@@ -91,7 +93,7 @@ export default function PayButton({ text, popular, amount, description }: PayBut
                     popular ? "bg-white text-black" : "border border-white text-white"
                 } flex items-center justify-center ${loading ? "opacity-50" : ""}`}
             >
-                <span>{loading ? "Загрузка..." : text}</span>
+                <span>{loading ? t('common.loading') : text}</span>
                 <ArrowRight className="ml-2 w-4 h-4" />
             </motion.button>
 
@@ -109,31 +111,31 @@ export default function PayButton({ text, popular, amount, description }: PayBut
                             animate={{ scale: 1 }}
                             exit={{ scale: 0.8 }}
                         >
-                            <h2 className="text-lg text-black font-semibold mb-4">Выберите способ оплаты</h2>
+                            <h2 className="text-lg text-black font-semibold mb-4">{t('onlineTraining.choosePayment')}</h2>
                             <div className="flex flex-col gap-3">
                                 <button
                                     onClick={handleCryptoPayment}
                                     className="bg-black text-white py-2 rounded hover:bg-gray-900 transition"
                                 >
-                                    Крипто (USDT TRC20)
+                                    {t('payment.methods.crypto')}
                                 </button>
                                 <button
                                     onClick={handleCardPayment}
                                     className="bg-black text-white py-2 rounded hover:bg-gray-900 transition"
                                 >
-                                    Оплата картой
+                                    {t('payment.methods.card')}
                                 </button>
                                 <button
                                     onClick={handleTgPayment}
                                     className="bg-black text-white py-2 rounded hover:bg-gray-900 transition"
                                 >
-                                    Оплата для РФ
+                                    {t('payment.methods.telegram')}
                                 </button>
                                 <button
                                     onClick={closeDialog}
                                     className="text-sm text-gray-500 mt-2 hover:underline"
                                 >
-                                    Отмена
+                                    {t('common.close')}
                                 </button>
                             </div>
                         </motion.div>

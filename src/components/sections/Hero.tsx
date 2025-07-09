@@ -2,31 +2,34 @@ import React from 'react';
 import ServiceCard from '../ServiceCard.tsx';
 import { Dumbbell, Calendar, Video, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
+
   const services = [
     {
       icon: <Dumbbell className="h-8 w-8 mb-2" />,
-      title: 'Био',
-      description: 'Узнайте больше о моем опыте и подходе',
+      title: t('hero.services.bio.title'),
+      description: t('hero.services.bio.description'),
       link: "#about"
     },
     {
       icon: <Calendar className="h-8 w-8 mb-2" />,
-      title: 'План тренировок',
-      description: 'Индивидуальные программы для ваших целей',
+      title: t('hero.services.plans.title'),
+      description: t('hero.services.plans.description'),
       link: "#plans"
     },
     {
       icon: <Video className="h-8 w-8 mb-2" />,
-      title: 'Онлайн тренировки',
-      description: 'Тренируйтесь из любого места в любое время',
+      title: t('hero.services.online.title'),
+      description: t('hero.services.online.description'),
       link: "#online"
     },
     {
       icon: <Users className="h-8 w-8 mb-2" />,
-      title: 'Закрытый канал',
-      description: 'Эксклюзивный контент для подписчиков',
+      title: t('hero.services.channel.title'),
+      description: t('hero.services.channel.description'),
       link: "#contact"
     }
   ];
@@ -43,7 +46,7 @@ const Hero: React.FC = () => {
                   transition={{ duration: 0.5 }}
                   className="text-3xl font-bold mb-4"
               >
-                Форма, которой ты будешь гордиться
+                {t('hero.title')}
               </motion.h1>
               <motion.p
                   initial={{ opacity: 0, y: -20 }}
@@ -51,7 +54,7 @@ const Hero: React.FC = () => {
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className="text-gray-400"
               >
-                Индивидуальные планы тренировок и питания под твою цель.
+                {t('hero.description')}
               </motion.p>
             </div>
 
@@ -85,7 +88,7 @@ const Hero: React.FC = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="text-4xl md:text-5xl font-bold mb-6 hidden lg:block"
               >
-                Форма, которой ты будешь гордиться
+                {t('hero.title')}
               </motion.h1>
               <motion.p
                   initial={{ opacity: 0, y: -20 }}
@@ -93,8 +96,7 @@ const Hero: React.FC = () => {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="text-gray-400 mb-8 hidden lg:block"
               >
-                Индивидуальные планы тренировок и питания, разработанные персонально под твою цель.
-                Результат — не случайность, а система.
+                {t('hero.descriptionFull')}
               </motion.p>
 
               {/* Карточки сервисов - теперь всегда 2x2 */}
@@ -121,7 +123,7 @@ const Hero: React.FC = () => {
                     href="#contact"
                     className="btn btn-primary mx-2 py-2 px-3 text-sm md:py-3 md:px-4 lg:py-4 lg:px-6 lg:text-base"
                 >
-                  ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ -{'>'}
+                  {t('hero.getConsultation')} -{'>'}
                 </motion.a>
               </div>
             </div>

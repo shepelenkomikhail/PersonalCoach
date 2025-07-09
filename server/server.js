@@ -6,8 +6,8 @@ function generateSignature({ m_shop, m_orderid, m_amount, m_curr, m_desc, m_key 
     return crypto.createHash("sha256").update(signString).digest("hex").toUpperCase();
 }
 
-const shopId = "2235028440";
-const secretKey = "2235028440";
+const shopId = process.env.SHOP_ID;
+const secretKey = process.env.SECRET_KEY;
 
 
 const server = http.createServer((req, res) => {

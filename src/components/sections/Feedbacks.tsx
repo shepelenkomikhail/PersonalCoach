@@ -1,5 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import {
     Carousel,
     CarouselContent,
@@ -7,7 +8,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "../ui/carousel.tsx";
-import {feedbacks} from "../../info/feedbacks.ts";
+import { useFeedbacks } from "../../hooks/useFeedbacks";
 import {Feedback} from "../../types/feedback.ts";
 
 const FeedbackCard: React.FC<Feedback> = ({avatar, name, text, city}) => (
@@ -32,6 +33,9 @@ const FeedbackCard: React.FC<Feedback> = ({avatar, name, text, city}) => (
 );
 
 const Feedbacks: React.FC = () => {
+    const { t } = useTranslation();
+    const feedbacks = useFeedbacks();
+
     return (
       <section id="feedbacks" className="section-padding relative overflow-hidden">
         <div className="container-custom">
@@ -42,7 +46,7 @@ const Feedbacks: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Отзывы клиентов</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('feedbacks.title')}</h2>
           </motion.div>
 
           <Carousel className="w-full max-w-2xl mx-auto">

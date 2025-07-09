@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Instagram} from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { sendEmail } from '../../emailService.ts';
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const [statusMessage, setStatusMessage] = useState('');
   const [statusType, setStatusType] = useState<'success' | 'error'>('success');
 
@@ -44,9 +46,9 @@ const Contact: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">СВЯЗАТЬСЯ СО МНОЙ</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('contact.title')}</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Остались вопросы? Напишите мне, и я отвечу в ближайшее время
+            {t('contact.description')}
           </p>
         </motion.div>
 
@@ -60,7 +62,7 @@ const Contact: React.FC = () => {
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
-                  Имя
+                  {t('contact.form.name')}
                 </label>
                 <input
                   type="text"
@@ -68,13 +70,13 @@ const Contact: React.FC = () => {
                   name="name"
                   required={true}
                   className="w-full bg-tertiary border-0 rounded p-3 text-white focus:ring-1 focus:ring-white"
-                  placeholder="Введите ваше имя"
+                  placeholder={t('contact.form.namePlaceholder')}
                 />
               </div>
               
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
-                  Email
+                  {t('contact.form.email')}
                 </label>
                 <input
                   type="email"
@@ -82,13 +84,13 @@ const Contact: React.FC = () => {
                   name="email"
                   required={true}
                   className="w-full bg-tertiary border-0 rounded p-3 text-white focus:ring-1 focus:ring-white"
-                  placeholder="Введите ваш email"
+                  placeholder={t('contact.form.emailPlaceholder')}
                 />
               </div>
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
-                  Сообщение
+                  {t('contact.form.message')}
                 </label>
                 <textarea
                   id="message"
@@ -96,7 +98,7 @@ const Contact: React.FC = () => {
                   rows={4}
                   required={true}
                   className="w-full bg-tertiary border-0 rounded p-3 text-white focus:ring-1 focus:ring-white"
-                  placeholder="Введите ваше сообщение"
+                  placeholder={t('contact.form.messagePlaceholder')}
                 ></textarea>
               </div>
               {statusMessage && (
@@ -118,7 +120,7 @@ const Contact: React.FC = () => {
                 type="submit"
                 className="btn btn-primary flex items-center"
               >
-                <span>Отправить</span>
+                <span>{t('contact.form.send')}</span>
                 <Send className="ml-2 w-4 h-4" />
               </motion.button>
             </form>
@@ -132,20 +134,20 @@ const Contact: React.FC = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-xl font-bold mb-4">Контактная информация</h3>
+              <h3 className="text-xl font-bold mb-4">{t('contact.info.title')}</h3>
               <p className="text-gray-400 mb-2">Email: masiania2906@gmail.com</p>
-              <p className="text-gray-400 mb-2">Телефон: +48 577 762 106</p>
-              <p className="text-gray-400">Варшава, Польша</p>
+              <p className="text-gray-400 mb-2">{t('contact.info.phone')}: +48 577 762 106</p>
+              <p className="text-gray-400">{t('contact.info.location')}</p>
             </div>
-            
+
             <div>
-              <h3 className="text-xl font-bold mb-4">Часы работы</h3>
-              <p className="text-gray-400 mb-2">Пн-Пт: 9:00 - 20:00</p>
-              <p className="text-gray-400">Сб-Вс: 10:00 - 18:00</p>
+              <h3 className="text-xl font-bold mb-4">{t('contact.info.workingHours')}</h3>
+              <p className="text-gray-400 mb-2">{t('contact.info.schedule.weekdays')}</p>
+              <p className="text-gray-400">{t('contact.info.schedule.weekends')}</p>
             </div>
-            
+
             <div>
-              <h3 className="text-xl font-bold mb-4">Социальные сети</h3>
+              <h3 className="text-xl font-bold mb-4">{t('contact.info.socialMedia')}</h3>
               <div className="flex space-x-4">
                 <motion.a
                   whileHover={{ scale: 1.1 }}

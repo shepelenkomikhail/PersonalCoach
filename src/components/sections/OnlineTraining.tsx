@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {trainingPlans} from "../../info/trainingPlans.ts";
+import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { useTrainingPlans } from "../../hooks/useTrainingPlans";
 import InfoDialog from "../InfoDialog.tsx";
 import PayButton from "../PayButton.tsx";
 
@@ -16,6 +17,8 @@ interface TrainingPlanProps {
 }
 
 const TrainingPlan: React.FC<TrainingPlanProps> = ({ title, description, features, price, img, popular = false, delay = 0, onMoreInfoClick }) => {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -26,7 +29,7 @@ const TrainingPlan: React.FC<TrainingPlanProps> = ({ title, description, feature
     >
       {popular && (
         <div className="absolute -top-3 right-6 bg-white text-black text-xs font-semibold py-1 px-3 rounded-full">
-          ПОПУЛЯРНЫЙ
+          {t('common.popular').toUpperCase()}
         </div>
       )}
 
@@ -47,23 +50,25 @@ const TrainingPlan: React.FC<TrainingPlanProps> = ({ title, description, feature
       </ul>
 
       <div className="flex items-center justify-between mb-4">
-        <span className="text-xl font-bold">{price} €</span>
+        <span className="text-xl font-bold">{price} {t('common.euro')}</span>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="text-sm underline"
           onClick={onMoreInfoClick}
         >
-          <span> Подробнее </span>
+          <span> {t('onlineTraining.moreInfo')} </span>
         </motion.button>
       </div>
 
-      <PayButton text={"КУПИТЬ"} popular={true} amount={price} description={description} />
+      <PayButton text={t('onlineTraining.buy')} popular={true} amount={price} description={description} />
     </motion.div>
   );
 };
 
 const OnlineTraining: React.FC = () => {
+  const { t } = useTranslation();
+  const trainingPlans = useTrainingPlans();
   const [showDialog, setShowDialog] = useState(false);
 
   return (
@@ -76,10 +81,9 @@ const OnlineTraining: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Тренируйся со мной из любой точки мира.</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('onlineTraining.title')}</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Покупаешь план — получаешь систему: тренировки, питание, поддержка, обратная связь.
-            Ты не просто скачиваешь файл — ты начинаешь работать с тренером.
+            {t('onlineTraining.description')}
           </p>
         </motion.div>
 

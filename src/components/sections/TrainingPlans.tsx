@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, BarChart, Activity } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const TrainingPlans: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="plans" className="section-padding  relative overflow-hidden">
       <div className="container-custom">
@@ -13,10 +16,9 @@ const TrainingPlans: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Структурированные программы.
-            Без воды. Без догадок.</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('trainingPlans.title')}</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Выбери то, что подойдёт именно тебе. Готовый план или персональное сопровождение — всё зависит от твоей цели и уровня.
+            {t('trainingPlans.description')}
           </p>
         </motion.div>
 
@@ -29,9 +31,9 @@ const TrainingPlans: React.FC = () => {
             viewport={{ once: true }}
             className="bg-surface p-4 md:p-8 rounded-lg"
           >
-            <h3 className="text-2xl font-bold mb-4">Готовый план</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('trainingPlans.ready.title')}</h3>
             <p className="text-gray-400 mb-6">
-              Хочешь начать уже сейчас? Выбирай цель — и получи чёткий пошаговый план.
+              {t('trainingPlans.ready.description')}
             </p>
 
             <div className="flex items-center space-x-6 mb-6">
@@ -42,15 +44,15 @@ const TrainingPlans: React.FC = () => {
                 <form className="space-y-2 text-gray-300">
                   <label className="flex items-center space-x-2">
                     <input type="checkbox" className="form-checkbox accent-primary" />
-                    <span>СБРОС ВЕСА</span>
+                    <span>{t('trainingPlans.ready.goals.weightLoss')}</span>
                   </label>
                   <label className="flex items-center space-x-2">
                     <input type="checkbox" className="form-checkbox accent-primary" />
-                    <span>НАБОР МАССЫ</span>
+                    <span>{t('trainingPlans.ready.goals.gainMass')}</span>
                   </label>
                   <label className="flex items-center space-x-2">
                     <input type="checkbox" className="form-checkbox accent-primary" />
-                    <span>ПОДДЕРЖАНИЕ ФОРМЫ</span>
+                    <span>{t('trainingPlans.ready.goals.maintain')}</span>
                   </label>
                 </form>
               </div>
@@ -62,7 +64,7 @@ const TrainingPlans: React.FC = () => {
               className="btn btn-primary flex items-center justify-center mx-auto"
             >
               <a href="https://t.me/masiiania" target={"_blank"}>
-                <span>ПОЛУЧИТЬ</span>
+                <span>{t('trainingPlans.getAccess')}</span>
               </a>
               <ArrowRight className="ml-2 w-4 h-4" />
             </motion.button>
@@ -76,9 +78,9 @@ const TrainingPlans: React.FC = () => {
             viewport={{ once: true }}
             className="bg-surface p-8 rounded-lg"
           >
-            <h3 className="text-2xl font-bold mb-4">Индивидуальный план</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('trainingPlans.individual.title')}</h3>
             <p className="text-gray-400 mb-6">
-              Под тебя. Под твой ритм. Под твою цель.
+              {t('trainingPlans.individual.subtitle')}
             </p>
             
             <div className="flex items-center space-x-6 mb-6">
@@ -89,19 +91,19 @@ const TrainingPlans: React.FC = () => {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <span className="w-1.5 h-1.5 bg-white inline-block mr-2"></span>
-                    Анализ физической формы
+                    {t('trainingPlans.individual.features.analysis')}
                   </li>
                   <li className="flex items-center">
                     <span className="w-1.5 h-1.5 bg-white inline-block mr-2"></span>
-                    Персональная программа
+                    {t('trainingPlans.individual.features.personalPlan')}
                   </li>
                   <li className="flex items-center">
                     <span className="w-1.5 h-1.5 bg-white inline-block mr-2"></span>
-                    Регулярные корректировки
+                    {t('trainingPlans.individual.features.nutrition')}
                   </li>
                   <li className="flex items-center">
                     <span className="w-1.5 h-1.5 bg-white inline-block mr-2"></span>
-                    Поддержка 24/7
+                    {t('trainingPlans.individual.features.support')}
                   </li>
                 </ul>
               </div>
@@ -113,7 +115,7 @@ const TrainingPlans: React.FC = () => {
               className="btn btn-outline flex items-center justify-center mx-auto"
             >
               <a href="https://t.me/masiiania" target={"_blank"}>
-                <span>ЗАПОЛНИТЬ АНКЕТУ</span>
+                <span>{t('trainingPlans.fillForm')}</span>
               </a>
               <ArrowRight className="ml-2 w-4 h-4" />
             </motion.button>
